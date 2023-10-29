@@ -21,7 +21,7 @@ const Pixeo = () => {
           duration: 0.25,
         }}
         viewport={{ once: true }}
-        className="h-screen py-[295px] mx-auto z-[1000] absolute top-0 left-0 right-0"
+        className="h-screen  py-[295px] mx-auto z-[1000] absolute top-0 left-0 right-0"
       >
         <div className="flex flex-col items-center justify-center ">
           <span className="text-white">Introducing</span>
@@ -38,6 +38,7 @@ const Pixeo = () => {
         initial="visible"
         animate="hidden"
         transition={{ ease: "easeIn", duration: 4 }}
+        className="hidden md:flex"
       >
         <div className="h-screen bg-[#000] opacity-60 flex flex-col items-center justify-center absolute w-full">
           <span className="text-white">Introducing</span>

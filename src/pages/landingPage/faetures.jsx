@@ -30,7 +30,7 @@ const FeaturedPosts = [
 
 const Features = () => {
   return (
-    <div className="px-[72px] flex items-start gap-[82.24px] pt-[110px] pb-[62px]">
+    <div className="lg:px-[72px] px-[24px] flex flex-col lg:flex-row items-start gap-[82.24px] pt-[110px] pb-[62px]">
       <div className="flex items-center gap-[16px]">
         <div className="h-max-[694px] flex flex-col items-center gap-[16px]">
           {FeaturedImages?.map((image, i) => (
@@ -60,20 +60,28 @@ const Features = () => {
         </div>
       </div>
 
-      <div className="w-[587px]">
-        <h5 className="text-[40px] font-bold pb-[48px] border-b-[1px] border-b-[text-black/0.20]">
+      <div className="lg:w-[587px] w-auto px-[2px]">
+        <h5 className="text-[22px] lg:text-[40px] font-bold pb-[48px] border-b-[1px] border-b-[text-black/0.20]">
           Features
         </h5>
         <div className="">
           {FeaturedPosts?.map((post, i) => (
             <div
               key={i}
-              className="flex items-start gap-[24px] pt-[60px] pb-[48px] border-b-[1px] border-b-[text-black/0.20]"
+              className="flex items-start gap-[24px] pt-[33px] lg:pt-[60px] pb-[26.5px] lg:pb-[48px] border-b-[1px] border-b-[text-black/0.20]"
             >
-              <img src={post.image} alt="" className="" />
+              <img
+                src={post.image}
+                alt=""
+                className="w-[33px] h-[33px] lg:w-[60px] lg:h-[60px]"
+              />
               <div className="">
-                <h6 className="text-[24px] font-bold">{post.title}</h6>
-                <p className="text-[16px] font-medium">{post.desc}</p>
+                <h6 className="text-[13px] leading-[17.846px] md:leading-[32.373px] lg:text-[24px] font-bold">
+                  {post.title}
+                </h6>
+                <p className="text-[8.8px] leading-[11.897px] md:leading-[21.582px] lg:text-[16px] font-medium">
+                  {post.desc}
+                </p>
               </div>
             </div>
           ))}

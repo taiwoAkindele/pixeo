@@ -3,16 +3,16 @@ import Explore from "../../assets/explore.svg";
 
 const Hero = () => {
   return (
-    <div className="py-[124px] bg-capa bg-no-repeat bg-cover min-h-screen">
-      <div className="flex flex-col gap-[24px] items-center justify-center mx-auto">
-        <h1 className="max-w-[789px] text-[80px] font-bold text-center">
+    <div className="bg-capa-mobile lg:bg-capa bg-no-repeat bg-cover lg:mt-[124px] mt-[77px] min-h-screen">
+      <div className="flex flex-col lg:gap-[24px] gap-[16px] items-center justify-center mx-auto">
+        <h1 className="lg:max-w-[700px] w-auto text-[39.852px] leading-[46.827px] md:leading-none lg:text-[70px] font-bold text-center">
           Unleash Your Creative Potential
         </h1>
-        <p className="max-w-[453px] text-[24px] font-medium text-center">
+        <p className="lg:max-w-[453px] max-w-[236px] text-[12.454px] lg:text-[18px] text-[#5B5B5B] font-medium text-center">
           Explore a Multitude of Artistic Disciplines and Ignite Your
           Imagination
         </p>
-        <button className="px-[35px] text-[16px] font-bold py-[13px] mt-[24px] border-[1px] border-[#FF4970] text-[#FF4970] rounded-[30px] flex items-center justify-center gap-[8px]">
+        <button className="px-[27px] lg:px-[35px] hover:bg-[#ff49701a] text-[14px] lg:text-[16px] font-bold py-[10px] lg:py-[13px] mt-[20px] lg:mt-[24px] border-[1px] border-[#FF4970] text-[#FF4970] rounded-[30px] flex items-center justify-center gap-[6px] lg:gap-[8px]">
           Explore
           <img src={Explore} alt="" />
         </button>
