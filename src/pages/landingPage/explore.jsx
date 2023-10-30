@@ -38,8 +38,8 @@ const Explore = ({ className }) => {
       </Reveal>
       <div className="md:py-[64px] pt-[25px] px-[2px] flex flex-col lg:flex-row w-full items-center gap-[24px]">
         {ExploreItems?.map((item, i) => (
-          <Reveal>
-            <div key={i} className="h-[465px] bg-white flex-1">
+          <Reveal key={i}>
+            <div className="h-[465px] bg-white flex-1">
               <img
                 src={item.image}
                 alt=""
