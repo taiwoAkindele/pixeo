@@ -6,6 +6,7 @@ import Image4 from "../../assets/box4.svg";
 import Bulb from "../../assets/bulb.svg";
 import Star from "../../assets/star.svg";
 import Community from "../../assets/community.svg";
+import Reveal from "../../components/Reveal";
 
 const FeaturedImages = [Image1, Image2];
 const nextImages = [Image3, Image4];
@@ -34,56 +35,64 @@ const Features = () => {
       <div className="flex items-center gap-[16px]">
         <div className="h-max-[694px] flex flex-col items-center gap-[16px]">
           {FeaturedImages?.map((image, i) => (
-            <div key={i}>
-              <img
-                src={image}
-                alt=""
-                className={`${i === 0 && "h-max-[352px]"}  ${
-                  i === 1 && "h-[277px]"
-                } w-[306px] object-cover`}
-              />
-            </div>
+            <Reveal key={i}>
+              <div>
+                <img
+                  src={image}
+                  alt=""
+                  className={`${i === 0 && "h-max-[352px]"}  ${
+                    i === 1 && "h-[277px]"
+                  } w-[306px] object-cover`}
+                />
+              </div>
+            </Reveal>
           ))}
         </div>
         <div className="h-max-[694px] flex flex-col items-center gap-[16px]">
           {nextImages?.map((image, i) => (
-            <div key={i}>
-              <img
-                src={image}
-                alt=""
-                className={` ${i === 1 && "h-max-[400px]"} ${
-                  i === 0 && "h-[277px]"
-                }  w-[306px] object-cover`}
-              />
-            </div>
+            <Reveal>
+              <div key={i}>
+                <img
+                  src={image}
+                  alt=""
+                  className={` ${i === 1 && "h-max-[400px]"} ${
+                    i === 0 && "h-[277px]"
+                  }  w-[306px] object-cover`}
+                />
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>
 
       <div className="lg:w-[587px] w-auto px-[2px]">
-        <h5 className="text-[22px] lg:text-[40px] font-bold pb-[48px] border-b-[1px] border-b-[text-black/0.20]">
-          Features
-        </h5>
+        <Reveal>
+          <h5 className="text-[22px] lg:text-[40px] font-bold pb-[48px] border-b-[1px] border-b-[text-black/0.20]">
+            Features
+          </h5>
+        </Reveal>
         <div className="">
           {FeaturedPosts?.map((post, i) => (
-            <div
-              key={i}
-              className="flex items-start gap-[24px] pt-[33px] lg:pt-[60px] pb-[26.5px] lg:pb-[48px] border-b-[1px] border-b-[text-black/0.20]"
-            >
-              <img
-                src={post.image}
-                alt=""
-                className="w-[33px] h-[33px] lg:w-[60px] lg:h-[60px]"
-              />
-              <div className="">
-                <h6 className="text-[13px] leading-[17.846px] md:leading-[32.373px] lg:text-[24px] font-bold">
-                  {post.title}
-                </h6>
-                <p className="text-[8.8px] leading-[11.897px] md:leading-[21.582px] lg:text-[16px] font-medium">
-                  {post.desc}
-                </p>
+            <Reveal>
+              <div
+                key={i}
+                className="flex items-start gap-[24px] pt-[33px] lg:pt-[60px] pb-[26.5px] lg:pb-[48px] border-b-[1px] border-b-[text-black/0.20]"
+              >
+                <img
+                  src={post.image}
+                  alt=""
+                  className="w-[33px] h-[33px] lg:w-[60px] lg:h-[60px]"
+                />
+                <div className="flex flex-col gap-[5px]">
+                  <h6 className="text-[15px] leading-[17.846px] md:leading-[32.373px] lg:text-[24px] font-bold">
+                    {post.title}
+                  </h6>
+                  <p className="text-[10.8px] leading-[11.897px] md:leading-[21.582px] lg:text-[16px] font-medium">
+                    {post.desc}
+                  </p>
+                </div>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import Explore from "./explore";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Pixeo = () => {
   const ref = useRef(null);
