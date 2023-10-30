@@ -50,8 +50,8 @@ const Features = () => {
         </div>
         <div className="h-max-[694px] flex flex-col items-center gap-[16px]">
           {nextImages?.map((image, i) => (
-            <Reveal>
-              <div key={i}>
+            <Reveal key={i}>
+              <div>
                 <img
                   src={image}
                   alt=""
@@ -73,11 +73,8 @@ const Features = () => {
         </Reveal>
         <div className="">
           {FeaturedPosts?.map((post, i) => (
-            <Reveal>
-              <div
-                key={i}
-                className="flex items-start gap-[24px] pt-[33px] lg:pt-[60px] pb-[26.5px] lg:pb-[48px] border-b-[1px] border-b-[text-black/0.20]"
-              >
+            <Reveal key={i}>
+              <div className="flex items-start gap-[24px] pt-[33px] lg:pt-[60px] pb-[26.5px] lg:pb-[48px] border-b-[1px] border-b-[text-black/0.20]">
                 <img
                   src={post.image}
                   alt=""
