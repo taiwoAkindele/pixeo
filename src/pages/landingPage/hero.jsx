@@ -4,7 +4,7 @@ import Reveal from "../../components/Reveal";
 
 const Hero = () => {
   return (
-    <div className="bg-capa-mobile lg:bg-capa bg-no-repeat bg-cover lg:mt-[124px] flex items-center justify-center min-h-screen">
+    <div className="bg-capa-mobile lg:bg-capa bg-no-repeat bg-cover lg:mt-[124px] flex items-center justify-center min-h-[calc(100vh-72px)]">
       <div className="flex flex-col lg:gap-[24px] gap-[16px] items-center justify-center mx-auto">
         <Reveal>
           <h1 className="lg:max-w-[700px] max-w-[379px] text-[40.852px] leading-[46.827px] md:leading-none lg:text-[70px] font-bold text-center">
