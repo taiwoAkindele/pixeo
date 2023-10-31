@@ -60,8 +60,8 @@ const Explore = ({ className }) => {
                     by <span className="font-bold">{item.by}</span>
                   </p>
                 </div>
-                <button className="w-full pointer-cursor hover:scale-x-90 transition flex items-center justify-between py-[15px] px-[25px]">
-                  <span className="text-[10px] lg:text-[14px] font-medium leading-[18.83px]">
+                <button className="w-full pointer-cursor hover:scale-x-105 transition flex items-center justify-between py-[15px] px-[25px]">
+                  <span className="text-[13px] lg:text-[14px] font-medium leading-[18.83px]">
                     View Product
                   </span>
                   <img src={ArrowBlack} alt="" />
