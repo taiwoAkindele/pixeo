@@ -4,7 +4,7 @@ import Menu from "../../assets/Menu.svg";
 import Close from "../../assets/Close.svg";
 import Reveal from "../../components/Reveal";
 
-const linkTexts = ["Pricing", "Product", "Community"];
+const linkTexts = ["Features", "Inspiration", "About us"];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
