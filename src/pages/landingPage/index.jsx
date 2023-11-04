@@ -5,6 +5,7 @@ import Pixeo from "./pixeo";
 // import Explore from "./explore";
 import Features from "./faetures";
 import Footer from "./footer";
+import Community from "./community";
 
 const LandingPage = () => {
   return (
@@ -14,6 +15,7 @@ const LandingPage = () => {
       <Pixeo />
       {/* <Explore /> */}
       <Features />
+      <Community />
       <Footer />
     </div>
   );
