@@ -2,12 +2,12 @@ import React from "react";
 
 const Community = () => {
   return (
-    <div className="bg-[#FFF5F7] w-[906px] w-full mx-auto my-[107px] flex items-center justify-center">
-      <div className="w-[531px] gap-[12px] pt-[65px] pb-[76px] flex flex-col items-center justify-center">
-        <h5 className="text-[44px] font-bold text-center">
+    <div className="py-[16px] mb-[48px] flex items-center justify-center">
+      <div className="bg-[#FFF5F7] w-[906px] rounded-[6px] px-[39px] pt-[42px] pb-[40px] flex flex-col items-center justify-center mx-[24px] gap-[10px]">
+        <h5 className="lg:text-[44px] text-[24px] font-bold text-center">
           Join the Community
         </h5>
-        <p className="text-[16px] font-medium text-center">
+        <p className="lg:text-[16px] w-[248px] lg:w-[513px] text-[10px] font-medium text-center leading-normal">
           Embark on a Creative Journey, Connect with Like-Minded Designers,
           Share Your Vision, and Collaborate to Redefine Design Excellence
         </p>
