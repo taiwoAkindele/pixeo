@@ -1,15 +1,15 @@
 import React from "react";
-import facebook from "../../assets/facebook.svg";
-import twitter from "../../assets/twitter.svg";
-import linkedin from "../../assets/linkedin.svg";
-import instagram from "../../assets/instagram.svg";
-import Reveal from "../../components/Reveal";
+import facebook from "../assets/facebook.svg";
+import twitter from "../assets/twitter.svg";
+import linkedin from "../assets/linkedin.svg";
+import instagram from "../assets/instagram.svg";
+import Reveal from "./Reveal";
 
 const socialNetwork = [facebook, twitter, instagram, linkedin];
 
 const Footer = () => {
   return (
-    <div className="lg:px-[72px] px-[24px] pb-[19px]">
+    <div className="lg:px-[72px] px-[24px] pb-[86px]">
       <Reveal>
         <div className="flex items-center justify-between border-b-[1px] border-b-[text-black/0.20]">
           <span className="text-[18px] lg:text-[36px] font-black">PIXEO</span>
@@ -26,7 +26,7 @@ const Footer = () => {
         </div>
       </Reveal>
       <Reveal>
-        <div className="flex items-center justify-between pt-[14px] pb-[86px]">
+        <div className="flex items-center justify-between pt-[14px]">
           <span className="text-[8px] lg:text-[16px] font-normal">
             ©2023 PIXEO Ltd. All rights reserved
           </span>

@@ -65,7 +65,7 @@ const Features = () => {
         </div>
       </div>
 
-      <div className="lg:w-[587px] w-auto px-[2px]">
+      <div id="features" className="lg:w-[587px] w-auto px-[2px]">
         <Reveal>
           <h5 className="text-[22px] lg:text-[40px] font-bold pb-[48px] border-b-[1px] border-b-[text-black/0.20]">
             Features
@@ -84,7 +84,7 @@ const Features = () => {
                   <h6 className="text-[15px] leading-[17.846px] md:leading-[32.373px] lg:text-[24px] font-bold">
                     {post.title}
                   </h6>
-                  <p className="text-[10.8px] leading-[11.897px] md:leading-[21.582px] lg:text-[16px] font-medium">
+                  <p className="text-[10.8px] leading-[13.45px] md:leading-[21.582px] lg:text-[16px] font-medium">
                     {post.desc}
                   </p>
                 </div>
