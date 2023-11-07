@@ -25,7 +25,7 @@ const AboutUs = () => {
           <img
             src={About1}
             alt=""
-            className="w-[327px] h-[147px] object-contain"
+            className="w-[327px] h-[147px] md:w-[1298px] md:h-[584px] object-contain"
           />
         </div>
         <div className="flex flex-col md:flex-row items-center pt-[73px] md:pt-[189px] gap-[24px] md:gap-[87px] pl-[25px] pr-[22px] md:pl-[72px] md:pr-[64px]">
