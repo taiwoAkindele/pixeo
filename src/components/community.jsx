@@ -11,7 +11,10 @@ const Community = () => {
           Embark on a Creative Journey, Connect with Like-Minded Designers,
           Share Your Vision, and Collaborate to Redefine Design Excellence
         </p>
-        <button className="px-[35px] py-[13px] mt-[12px] text-white bg-[#FF4970] hover:opacity-20 rounded-[30px]">
+        <button className="hidden md:flex px-[35px] py-[13px] mt-[12px] text-white bg-[#FF4970] hover:opacity-20 rounded-[30px]">
+          Sign up
+        </button>
+        <button className="flex md:hidden px-[35px] py-[13px] mt-[12px] text-white bg-[#FF4970] hover:opacity-20 rounded-[30px]">
           Get Started
         </button>
       </div>

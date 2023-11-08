@@ -6,7 +6,7 @@ import Reveal from "./Reveal";
 import { useNavigate } from "react-router-dom";
 
 const linkTexts = [
-  { link: "#features", title: "Features" },
+  { link: "/#features", title: "Features" },
   { link: "", title: "Inspiration" },
   { link: "/about", title: "About us" },
 ];
@@ -59,22 +59,24 @@ const Navbar = () => {
             Sign up
           </button>
         </div>
-        <div className="absolute z-[1000] top-[60px] left-0 right-0 shadow-[#000]">
+        <div className="fixed z-[1000] top-[60px] left-0 right-0 shadow-[#000]">
           {open && (
-            <div className="bg-white px-[24px] py-[40px] border-b border-b-[#fff] h-[100%] flex flex-col mt-[30px] items-center">
-              <ul className="flex flex-col items-center gap-[25px]">
-                {linkTexts?.map((text, i) => (
-                  <li
-                    key={i}
-                    className="text-[18px] cursor-pointer hover:text-primary text-black font-medium"
-                  >
-                    <a href={text.link}>{text.title}</a>
-                  </li>
-                ))}
-              </ul>
-              <button className="py-[10px] mt-[25px] w-[100vw] border border-[1px] border-[#F4F4F4] text-[18px] cursor-pointer hover:text-primary font-medium">
-                Login
-              </button>
+            <div className="bg-[rgba(0,0,0,0.7)] inset-0 h-screen">
+              <div className="bg-white px-[24px] py-[40px] border-b border-b-[#fff] flex flex-col mt-[30px] items-center">
+                <ul className="flex flex-col items-center gap-[25px]">
+                  {linkTexts?.map((text, i) => (
+                    <li
+                      key={i}
+                      className="text-[18px] cursor-pointer hover:text-primary text-black font-medium"
+                    >
+                      <a href={text.link}>{text.title}</a>
+                    </li>
+                  ))}
+                </ul>
+                <button className="py-[10px] mt-[25px] w-[100vw] border border-[1px] border-[#F4F4F4] text-[18px] cursor-pointer hover:text-primary font-medium">
+                  Login
+                </button>
+              </div>
             </div>
           )}
         </div>
