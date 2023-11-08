@@ -25,10 +25,10 @@ const AboutUs = () => {
           <img
             src={About1}
             alt=""
-            className="w-[327px] h-[147px] md:w-[1298px] md:h-[584px] object-contain"
+            className="w-[100vw] h-[147px] md:w-[1298px] md:h-[584px] object-cover md:object-contain rounded-[8px]"
           />
         </div>
-        <div className="flex flex-col md:flex-row items-center pt-[73px] md:pt-[189px] gap-[24px] md:gap-[87px] pl-[25px] pr-[22px] md:pl-[72px] md:pr-[64px]">
+        <div className="flex flex-col md:flex-row items-center pt-[32px] md:pt-[100px] gap-[24px] md:gap-[87px] pl-[25px] pr-[22px] md:pl-[72px] md:pr-[64px]">
           <div className="flex flex-col items-left gap-[18px] md:gap-[32px]">
             <h6 className="text-[24px] md:text-[44px] font-bold">
               Our Mission
@@ -55,16 +55,16 @@ const AboutUs = () => {
             <img
               src={About2}
               alt=""
-              className="w-[330px] h-[221px] md:w-[641px] md:h-[427px] object-contain md:object-cover md:rounded-[8px]"
+              className="w-[100vw] h-[221px] md:w-[641px] md:h-[427px] object-cover rounded-[8px]"
             />
           </div>
         </div>
-        <div className="flex flex-col md:flex-row items-center py-[65px] md:py-[195px] gap-[24px] md:gap-[46px] pl-[25px] pr-[22px] md:pl-[70px] md:pr-[70px]">
+        <div className="flex flex-col md:flex-row items-center py-[32px] md:py-[100px] gap-[24px] md:gap-[46px] pl-[25px] pr-[22px] md:pl-[70px] md:pr-[70px]">
           <div className="">
             <img
               src={About3}
               alt=""
-              className="md:w-[614px] w-[330px] h-[225px] md:h-[435px] object-contain md:object-cover md:rounded-[8px]"
+              className="md:w-[614px] w-[100vw] h-[225px] md:h-[435px] object-cover rounded-[8px]"
             />
           </div>
           <div className="md:w-[631px] w-full flex flex-col items-left gap-[18px] md:gap-[32px]">
@@ -88,7 +88,7 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
-        <div className="md:px-[72px] pl-[25px] pr-[22px] pt-[21px] md:pt-[0px]">
+        <div className="md:px-[72px] pl-[25px] pr-[22px]">
           <div className="flex flex-col gap-[18px] md:gap-[32px]">
             <h6 className="text-[24px] md:text-[44px] font-bold">
               The Journey
