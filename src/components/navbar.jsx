@@ -4,6 +4,7 @@ import Menu from "../assets/Menu.svg";
 import Close from "../assets/Close.svg";
 import Reveal from "./Reveal";
 import { useNavigate } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const linkTexts = [
   { link: "/#features", title: "Features" },
@@ -51,11 +52,17 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <button className="hidden px-[35px] py-[13px] text-white bg-[#FF4970] hover:opacity-20 rounded-[30px] lg:flex items-center justify-center gap-[8px]">
+          <button
+            onClick={() => navigate("/signup")}
+            className="hidden px-[35px] py-[13px] text-white bg-[#FF4970] hover:opacity-20 rounded-[30px] lg:flex items-center justify-center gap-[8px]"
+          >
             Get Started
             <img src={ArrowLeft} alt="" />
           </button>
-          <button className="px-[27px] md:hidden py-[10px] text-white bg-[#FF4970] hover:opacity-20 rounded-[30px]">
+          <button
+            onClick={() => navigate("/signup")}
+            className="px-[27px] md:hidden py-[10px] text-white bg-[#FF4970] hover:opacity-20 rounded-[30px]"
+          >
             Sign up
           </button>
         </div>
@@ -69,11 +76,22 @@ const Navbar = () => {
                       key={i}
                       className="text-[18px] cursor-pointer hover:text-primary text-black font-medium"
                     >
-                      <a href={text.link}>{text.title}</a>
+                      {text.link?.includes("#") ? (
+                        <HashLink to={text.link} onClick={() => setOpen(false)}>
+                          {text.title}
+                        </HashLink>
+                      ) : (
+                        <a href={text.link} onClick={() => setOpen(false)}>
+                          {text.title}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>
-                <button className="py-[10px] mt-[25px] w-[100vw] border border-[1px] border-[#F4F4F4] text-[18px] cursor-pointer hover:text-primary font-medium">
+                <button
+                  onClick={() => navigate("/login")}
+                  className="py-[10px] mt-[25px] w-[100vw] border border-[1px] border-[#F4F4F4] text-[18px] cursor-pointer hover:text-primary font-medium"
+                >
                   Login
                 </button>
               </div>

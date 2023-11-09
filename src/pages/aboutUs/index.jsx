@@ -6,6 +6,12 @@ import About3 from "../../assets/about3.svg";
 import About4 from "../../assets/about4.svg";
 import About5 from "../../assets/about5.svg";
 import About6 from "../../assets/about6.svg";
+import mobileAbout1 from "../../assets/aboutmobile.svg";
+import mobileAbout2 from "../../assets/aboutmobile2.svg";
+import mobileAbout3 from "../../assets/aboutmobile3.svg";
+// import mobileAbout4 from "../../assets/aboutmobile4.svg";
+// import mobileAbout5 from "../../assets/aboutmobile5.svg";
+// import mobileAbout6 from "../../assets/aboutmobile6.svg";
 
 const AboutUs = () => {
   return (
@@ -25,7 +31,12 @@ const AboutUs = () => {
           <img
             src={About1}
             alt=""
-            className="w-[100vw] h-[147px] md:w-[1298px] md:h-[584px] object-cover md:object-contain rounded-[8px]"
+            className="hidden md:flex w-[1298px] h-[584px] object-contain"
+          />
+          <img
+            src={mobileAbout1}
+            alt=""
+            className="md:hidden flex w-[100vw] object-contain"
           />
         </div>
         <div className="flex flex-col md:flex-row items-center pt-[32px] md:pt-[100px] gap-[24px] md:gap-[87px] pl-[25px] pr-[22px] md:pl-[72px] md:pr-[64px]">
@@ -45,7 +56,7 @@ const AboutUs = () => {
               design challenges, and drive innovation.
               <br />
               <br />
-              Our journey began with asimple but profound mission: to provide a
+              Our journey began with a simple but profound mission: to provide a
               platform where design enthusiasts, regardless of their background
               or experience, can find a home for their creativity and a canvas
               for their imagination.
@@ -55,7 +66,12 @@ const AboutUs = () => {
             <img
               src={About2}
               alt=""
-              className="w-[100vw] h-[221px] md:w-[641px] md:h-[427px] object-cover rounded-[8px]"
+              className="hidden md:flex w-[641px] h-[427px] object-cover"
+            />
+            <img
+              src={mobileAbout2}
+              alt=""
+              className="w-[100vw] flex md:hidden object-cover"
             />
           </div>
         </div>
@@ -64,7 +80,12 @@ const AboutUs = () => {
             <img
               src={About3}
               alt=""
-              className="md:w-[614px] w-[100vw] h-[225px] md:h-[435px] object-cover rounded-[8px]"
+              className="hidden md:flex w-[614px] h-[435px] object-cover"
+            />
+            <img
+              src={mobileAbout3}
+              alt=""
+              className="w-[100vw] flex md:hidden object-contain"
             />
           </div>
           <div className="md:w-[631px] w-full flex flex-col items-left gap-[18px] md:gap-[32px]">

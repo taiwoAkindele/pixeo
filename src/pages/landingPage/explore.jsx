@@ -25,9 +25,7 @@ const ExploreItems = [
 
 const Explore = ({ className }) => {
   return (
-    <div
-      className={`lg:px-[72px] px-[27px] bg-[#F5F5F5] lg:py-[116px] py-[42px] ${className}`}
-    >
+    <div className={`lg:px-[72px] px-[27px] bg-[#F5F5F5] ${className}`}>
       <Reveal>
         <span className="font-medium text-[12px]">Explore</span>
       </Reveal>
