@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Image1 from "../../assets/box1.svg";
 import Image2 from "../../assets/box2.svg";
 import Image3 from "../../assets/box3.svg";
@@ -30,13 +30,6 @@ const FeaturedPosts = [
 ];
 
 const Features = () => {
-  const ref = useRef(null);
-  useEffect(() => {
-    if (window.location.href?.includes("features")) {
-      ref.current?.scrollIntoView({ behavior: "smooth" });
-    }
-  }, []);
-
   return (
     <div className="lg:px-[72px] px-[24px] flex flex-col lg:flex-row items-start gap-[82.24px] pt-[110px] pb-[62px]">
       <div className="flex items-center gap-[16px]">
@@ -73,10 +66,7 @@ const Features = () => {
       </div>
       <div id="features" className="lg:w-[587px] w-auto px-[2px]">
         <Reveal>
-          <h5
-            ref={ref}
-            className="text-[22px] lg:text-[40px] font-bold pb-[48px] border-b-[1px] border-b-[text-black/0.20]"
-          >
+          <h5 className="text-[22px] lg:text-[40px] font-bold pb-[48px] border-b-[1px] border-b-[text-black/0.20]">
             Features
           </h5>
         </Reveal>
