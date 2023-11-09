@@ -13,10 +13,13 @@
     "@coreui/coreui": "^3.4.0",
     "@coreui/react": "^3.4.0",
     "framer-motion": "^10.16.4",
+    "axios": "^1.4.0",
+    "formik": "^2.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.18.0",
-    "react-router-hash-link": "^2.4.3"
+    "react-router-hash-link": "^2.4.3",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
