@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { AboutUs, LandingPage, Login, Signup } from "./pages";
+import { AboutUs, ForgotPassword, LandingPage, Login, Signup } from "./pages";
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       <Route path="about" element={<AboutUs />} />
       <Route path="login" element={<Login />} />
       <Route path="signup" element={<Signup />} />
+      <Route path="forgot-password" element={<ForgotPassword />} />
     </Routes>
   );
 }
