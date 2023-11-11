@@ -4,18 +4,26 @@ import BackIcon from "../../../assets/backicon.svg";
 import TextField from "../../input";
 import { ValidationSchema } from "./validationSchema";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { loginUser } from "../../../redux/user/actions";
+import Button from "../../button";
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { isLoading } = useSelector((store) => store.user);
+
   return (
-    <div className="h-[100%] flex flex-col pr-[26px] pl-[24px] md:pr-[58px]">
+    <div className="h-[100%] flex flex-col pr-[26px] pl-[24px] md:pr-[129px]">
       <div
         onClick={() => navigate(-1)}
         className="flex items-center cursor-pointer pt-[34px]"
       >
         <img src={BackIcon} alt="" />
-        <span className="text-[18px] text-[#0A0A0A] font-medium">Back</span>
+        <span className="text-[18px] text-[#0A0A0A] hover:text-primary font-medium">
+          Back
+        </span>
       </div>
       <Formik
         initialValues={{
@@ -24,7 +32,10 @@ const LoginForm = () => {
         }}
         validationSchema={ValidationSchema}
         onSubmit={async (values, action) => {
-          console.log(values);
+          const res = await dispatch(loginUser(values));
+          if (res) {
+            navigate("/");
+          }
         }}
       >
         {({ handleChange, errors }) => (
@@ -61,12 +72,9 @@ const LoginForm = () => {
               >
                 Forgot Password?
               </span>
-              <button
-                type="submit"
-                className="px-[35px] text-[12px] md:text-[16px] font-bold py-[13px] text-white bg-[#FF4970] hover:opacity-20 rounded-[16px] md:rounded-[27px]"
-              >
+              <Button type="submit" loading={isLoading}>
                 Log in
-              </button>
+              </Button>
               <span className="text-[10px] md:text-[16px] text-[#333] pt-[12px] text-center">
                 Don't have an account?{" "}
                 <span

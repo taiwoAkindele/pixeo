@@ -9,13 +9,15 @@ const ForgotPasswordForm = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <div className="h-[100%] flex flex-col pr-[26px] pl-[24px] md:pr-[58px]">
+      <div className="h-[100%] flex flex-col pr-[26px] pl-[24px] md:pr-[129px]">
         <div
           onClick={() => navigate(-1)}
           className="flex items-center cursor-pointer pt-[34px]"
         >
           <img src={BackIcon} alt="" />
-          <span className="text-[18px] text-[#0A0A0A] font-medium">Back</span>
+          <span className="text-[18px] text-[#0A0A0A] hover:text-primary font-medium">
+            Back
+          </span>
         </div>
         <Formik
           initialValues={{

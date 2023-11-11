@@ -1,6 +1,15 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { AboutUs, ForgotPassword, LandingPage, Login, Signup } from "./pages";
+import {
+  AboutUs,
+  ChangePassword,
+  EmailVerified,
+  ForgotPassword,
+  LandingPage,
+  Login,
+  Signup,
+  Success,
+} from "./pages";
 
 function App() {
   return (
@@ -10,6 +19,9 @@ function App() {
       <Route path="login" element={<Login />} />
       <Route path="signup" element={<Signup />} />
       <Route path="forgot-password" element={<ForgotPassword />} />
+      <Route path="/success" element={<Success />} />
+      <Route path="/change-password" element={<ChangePassword />} />
+      <Route path="/email-verify" element={<EmailVerified />} />
     </Routes>
   );
 }
