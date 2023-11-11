@@ -2,9 +2,6 @@ import * as Yup from "yup";
 import { passwordRegExp } from "../../../utils";
 
 export const ValidationSchema = Yup.object().shape({
-  firstName: Yup.string().nullable().required("Required"),
-  lastName: Yup.string().nullable().required("Required"),
-  email: Yup.string().nullable().required("Required"),
   password: Yup.string()
     .min(8, "Password needs to be a minimum of 8 numbers")
     .matches(

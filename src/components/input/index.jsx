@@ -29,7 +29,7 @@ const TextField = ({
           placeholder={placeholder}
           value={value}
           onChange={onChange}
-          className={`outline-none focus-none w-full ${className}`}
+          className={`outline-none focus-none w-full placeholder:text-[#666] placeholder:opacity-60 ${className}`}
         />
         {inputType === "password" && (
           <div onClick={togglePassword} className="cursor-pointer">
