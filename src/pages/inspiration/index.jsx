@@ -51,13 +51,12 @@ const Inspiration = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-x-0 md:gap-x-[23px] gap-[18.36px] md:gap-y-[39px] pt-[16px] pb-[109px]">
         {data?.map((item, i) => (
           <div key={i} className="flex flex-col gap-[9.58px] md:gap-[12px]">
-            <div className="">
-              <img
-                src={item.image}
-                alt=""
-                className="hover:scale-105 cursor-pointer transition"
-              />
-            </div>
+            <img
+              src={item.image}
+              alt=""
+              className="hover:scale-105 cursor-pointer transition"
+            />
+
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-[4px]">
                 <img
