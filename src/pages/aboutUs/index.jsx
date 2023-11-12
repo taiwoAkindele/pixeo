@@ -66,7 +66,7 @@ const AboutUs = () => {
             <img
               src={About2}
               alt=""
-              className="hidden md:flex w-[641px] h-[427px] object-cover"
+              className="hidden md:flex w-[641px] h-[427px] object-cover rounded-[8px]"
             />
             <img
               src={mobileAbout2}
@@ -80,7 +80,7 @@ const AboutUs = () => {
             <img
               src={About3}
               alt=""
-              className="hidden md:flex w-[614px] h-[435px] object-cover"
+              className="hidden md:flex w-[614px] h-[435px] object-cover md:rounded-[8px]"
             />
             <img
               src={mobileAbout3}

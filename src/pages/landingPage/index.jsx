@@ -6,13 +6,11 @@ import Layout from "../../components/layout";
 
 const LandingPage = () => {
   return (
-    <div>
-      <Layout>
-        <Hero />
-        <Explore />
-        <Features />
-      </Layout>
-    </div>
+    <Layout>
+      <Hero />
+      <Explore />
+      <Features />
+    </Layout>
   );
 };
 

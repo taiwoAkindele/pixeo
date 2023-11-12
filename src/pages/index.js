@@ -6,3 +6,4 @@ export { default as ForgotPassword } from "./forgotPassword";
 export { default as Success } from "./success";
 export { default as ChangePassword } from "./changePassword";
 export { default as EmailVerified } from "./emailVerified";
+export { default as Inspiration } from "./inspiration";

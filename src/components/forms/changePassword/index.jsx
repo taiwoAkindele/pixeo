@@ -16,7 +16,7 @@ const ChangePasswordForm = () => {
         className="flex items-center cursor-pointer pt-[34px]"
       >
         <img src={BackIcon} alt="" />
-        <span className="text-[18px] text-[#0A0A0A] hover:text-primary font-medium">
+        <span className="text-[18px] text-[#0A0A0A] hover:text-primary  font-medium">
           Back
         </span>
       </div>
@@ -31,7 +31,10 @@ const ChangePasswordForm = () => {
         }}
       >
         {({ handleChange, errors }) => (
-          <Form>
+          <Form className="flex flex-col justify-center pt-[117px]">
+            <h6 className="text-[#333] text-[18px] md:text-[30px] font-bold">
+              Enter New Password
+            </h6>
             <div className="flex flex-col gap-[18px] pt-[24px]">
               <div className="">
                 <TextField

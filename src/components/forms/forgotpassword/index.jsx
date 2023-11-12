@@ -26,6 +26,7 @@ const ForgotPasswordForm = () => {
           validationSchema={ValidationSchema}
           onSubmit={async (values, action) => {
             console.log(values);
+            navigate("/change-password");
           }}
         >
           {({ handleChange, errors }) => (

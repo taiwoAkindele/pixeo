@@ -34,7 +34,7 @@ const LoginForm = () => {
         onSubmit={async (values, action) => {
           const res = await dispatch(loginUser(values));
           if (res) {
-            navigate("/");
+            navigate("/inspiration");
           }
         }}
       >
