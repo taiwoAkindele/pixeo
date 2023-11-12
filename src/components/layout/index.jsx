@@ -1,15 +1,15 @@
 import React from "react";
-import Navbar from "../navbar";
 import Community from "../community";
 import Footer from "../footer";
+import { LandingNavbar } from "../navbar";
 
 const Layout = ({ children }) => {
   return (
     <div>
-      <Navbar />
+      <LandingNavbar />
       {children}
       <Community />
-      <Footer />
+      <Footer className="lg:px-[72px] px-[24px]" />
     </div>
   );
 };

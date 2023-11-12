@@ -54,7 +54,7 @@ const EmailVerified = () => {
             </button>
           </>
         ) : (
-          <>
+          <div className="px-[24px]">
             <h6 className="text-[30px] font-bold text-[#333] leading-none">
               Email Verification
             </h6>
@@ -66,7 +66,7 @@ const EmailVerified = () => {
                 Resend Email Verification
               </Button>
             )}
-          </>
+          </div>
         )}
       </div>
     </div>

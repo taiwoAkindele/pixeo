@@ -7,9 +7,9 @@ import Reveal from "./Reveal";
 
 const socialNetwork = [facebook, twitter, instagram, linkedin];
 
-const Footer = () => {
+const Footer = ({ className }) => {
   return (
-    <div className="lg:px-[72px] px-[24px] pb-[86px]">
+    <div className={`pb-[36px] ${className}`}>
       <Reveal>
         <div className="flex items-center justify-between border-b-[1px] border-b-[text-black/0.20]">
           <span className="text-[18px] lg:text-[36px] font-black">PIXEO</span>

@@ -5,6 +5,7 @@ import {
   ChangePassword,
   EmailVerified,
   ForgotPassword,
+  Inspiration,
   LandingPage,
   Login,
   Signup,
@@ -16,6 +17,7 @@ function App() {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="about" element={<AboutUs />} />
+      <Route path="inspiration" element={<Inspiration />} />
       <Route path="login" element={<Login />} />
       <Route path="signup" element={<Signup />} />
       <Route path="forgot-password" element={<ForgotPassword />} />
