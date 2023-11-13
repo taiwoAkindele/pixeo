@@ -50,15 +50,14 @@ const Inspiration = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-x-0 md:gap-x-[23px] gap-[18.36px] md:gap-y-[39px] pt-[16px] pb-[109px]">
         {data?.map((item, i) => (
-          <div
-            key={i}
-            className="flex flex-col overflow-hidden rounded-[12px] gap-[9.58px] md:gap-[12px]"
-          >
-            <img
-              src={item.image}
-              alt=""
-              className="hover:scale-105 max-w-[416px] cursor-pointer transition"
-            />
+          <div key={i} className="flex flex-col gap-[9.58px] md:gap-[12px]">
+            <div className="overflow-hidden rounded-[12px]">
+              <img
+                src={item.image}
+                alt=""
+                className="hover:scale-105 max-w-[416px] cursor-pointer transition"
+              />
+            </div>
 
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-[4px]">
