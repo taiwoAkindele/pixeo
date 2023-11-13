@@ -11,7 +11,7 @@ const Search = ({ className, containerClass, ...props }) => {
         {...props}
         type="text"
         placeholder="Search..."
-        className={`focus-none outline-none mx-[14px] ${className}`}
+        className={`focus-none outline-none w-[100%] mx-[14px] ${className}`}
       />
     </div>
   );

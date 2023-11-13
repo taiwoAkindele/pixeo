@@ -7,7 +7,7 @@ import profileImg from "../../assets/profileImage.svg";
 
 const linkTexts = [
   { link: "/inspiration", title: "Inspiration" },
-  { link: "/about", title: "About us" },
+  { link: "/about", title: "About" },
 ];
 
 const AuthNavbar = () => {
@@ -16,21 +16,21 @@ const AuthNavbar = () => {
 
   return (
     <div className="relative z-[1000] h-[72px]">
-      <div className="flex items-center justify-between fixed top-0 left-0 right-0 lg:px-[72px] px-[18px] py-[22px] bg-[#fff]">
+      <div className="flex items-center md:gap-[49px] justify-between fixed top-0 left-0 right-0 md:px-[72px] px-[18px] py-[22px] bg-[#fff]">
         <div className="flex items-center my-auto gap-[10px]">
           {!open ? (
             <img
               src={Menu}
               alt=""
               onClick={() => setOpen(true)}
-              className="lg:hidden flex cursor-pointer"
+              className="md:hidden flex cursor-pointer"
             />
           ) : (
             <img
               src={Close}
               alt=""
               onClick={() => setOpen(false)}
-              className="lg:hidden flex cursor-pointer"
+              className="md:hidden flex cursor-pointer"
             />
           )}
           <h1
@@ -43,9 +43,9 @@ const AuthNavbar = () => {
         <div className="flex items-center">
           <Search
             className="ml-[20px] bg-inherit"
-            containerClass="mr-[47px] hidden md:flex items-center w-[551px]"
+            containerClass="mr-[38px] hidden md:flex items-center lg:w-[500px] w-[auto]"
           />
-          <ul className="hidden lg:flex items-center gap-[47px]">
+          <ul className="hidden md:flex items-center gap-[48px]">
             {linkTexts?.map((text, i) => (
               <li
                 key={i}
@@ -58,7 +58,7 @@ const AuthNavbar = () => {
           <img
             src={profileImg}
             alt=""
-            className="ml-[47px] w-[33px] h-[33px] md:w-[53px] md:h-[53px] object-contain"
+            className="ml-[29px] w-[33px] h-[33px] md:w-[53px] md:h-[53px] object-contain"
           />
         </div>
       </div>

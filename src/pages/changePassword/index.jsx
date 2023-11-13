@@ -5,7 +5,7 @@ const ChangePassword = () => {
   return (
     <div className="h-screen flex gap-[69px]">
       <div className="hidden md:flex bg-signin w-[628px] bg-no-repeat bg-cover"></div>
-      <div className="flex-1">
+      <div className="">
         <ChangePasswordForm />
       </div>
     </div>

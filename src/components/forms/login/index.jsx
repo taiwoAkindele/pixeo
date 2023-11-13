@@ -15,7 +15,7 @@ const LoginForm = () => {
   const { isLoading } = useSelector((store) => store.user);
 
   return (
-    <div className="h-[100%] flex flex-col pr-[26px] pl-[24px] md:pr-[129px]">
+    <div className="h-[100%] md:w-[586px] flex flex-col pr-[26px] pl-[24px] md:pr-[58px]">
       <div
         onClick={() => navigate(-1)}
         className="flex items-center cursor-pointer pt-[34px]"

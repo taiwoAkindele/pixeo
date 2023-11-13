@@ -18,7 +18,7 @@ const TextField = ({
     <div className="flex flex-col gap-[4px] w-[100%]">
       <label
         htmlFor=""
-        className="text-[9px] md:text-[16px] font-normal text-[#666]"
+        className="text-[12px] md:text-[16px] font-normal text-[#666]"
       >
         {label}
       </label>
