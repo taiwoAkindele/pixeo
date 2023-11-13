@@ -39,22 +39,25 @@ const data = [
 
 const Inspiration = () => {
   return (
-    <div className="lg:px-[72px] px-[18px]">
+    <div className="md:px-[72px] px-[18px]">
       <AuthNavbar />
       <div className="flex items-center mt-[30px] gap-[12px]">
         <Search
           className="ml-[10px] bg-inherit w-[auto]"
           containerClass="flex md:hidden items-center"
         />
-        <FilterButton className="ml-auto" />
+        <FilterButton className="ml-auto hover:border-[#000]" />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-x-0 md:gap-x-[23px] gap-[18.36px] md:gap-y-[39px] pt-[16px] pb-[109px]">
         {data?.map((item, i) => (
-          <div key={i} className="flex flex-col gap-[9.58px] md:gap-[12px]">
+          <div
+            key={i}
+            className="flex flex-col overflow-hidden rounded-[12px] gap-[9.58px] md:gap-[12px]"
+          >
             <img
               src={item.image}
               alt=""
-              className="hover:scale-105 cursor-pointer transition"
+              className="hover:scale-105 max-w-[416px] cursor-pointer transition"
             />
 
             <div className="flex items-center justify-between">
