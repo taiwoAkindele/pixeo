@@ -10,13 +10,13 @@ const ChangePasswordForm = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const navigate = useNavigate();
   return (
-    <div className="h-[100%] flex flex-col pr-[26px] pl-[24px] md:pr-[129px]">
+    <div className="h-[100%] md:w-[586px] flex flex-col pr-[26px] pl-[24px] md:pr-[58px]">
       <div
         onClick={() => navigate(-1)}
         className="flex items-center cursor-pointer pt-[34px]"
       >
         <img src={BackIcon} alt="" />
-        <span className="text-[18px] text-[#0A0A0A] hover:text-primary  font-medium">
+        <span className="text-[18px] text-[#0A0A0A] hover:text-primary font-medium">
           Back
         </span>
       </div>
@@ -31,7 +31,7 @@ const ChangePasswordForm = () => {
         }}
       >
         {({ handleChange, errors }) => (
-          <Form className="flex flex-col justify-center pt-[117px]">
+          <Form className="h-[calc(100vh-34px)] flex flex-col justify-center pt-[24px]">
             <h6 className="text-[#333] text-[18px] md:text-[30px] font-bold">
               Enter New Password
             </h6>
