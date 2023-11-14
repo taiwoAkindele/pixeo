@@ -18,7 +18,7 @@ const TextField = ({
     <div className="flex flex-col gap-[4px] w-[100%]">
       <label
         htmlFor=""
-        className="text-[12px] md:text-[16px] font-normal text-[#666]"
+        className="text-[14px] md:text-[16px] font-normal text-[#666]"
       >
         {label}
       </label>
@@ -29,7 +29,7 @@ const TextField = ({
           placeholder={placeholder}
           value={value}
           onChange={onChange}
-          className={`outline-none focus-none w-full placeholder:text-[#666] placeholder:opacity-60 ${className}`}
+          className={`outline-none focus-none w-full placeholder:text-[#666] placeholder:text-[14px] placeholder:opacity-60 ${className}`}
         />
         {inputType === "password" && (
           <div onClick={togglePassword} className="cursor-pointer">
