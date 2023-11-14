@@ -1,5 +1,5 @@
 import React from "react";
-import { AuthNavbar } from "../../components/navbar";
+import { AuthNavbar, LandingNavbar } from "../../components/navbar";
 import FilterButton from "../../components/filter";
 import Dashboard from "../../assets/dashboard.svg";
 import Giraffe from "../../assets/girraffe.svg";
@@ -38,9 +38,10 @@ const data = [
 ];
 
 const Inspiration = () => {
+  const accessToken = localStorage.getItem("token");
   return (
     <div className="md:px-[72px] px-[18px]">
-      <AuthNavbar />
+      {accessToken ? <AuthNavbar /> : <LandingNavbar />}
       <div className="flex items-center mt-[30px] gap-[12px]">
         <Search
           className="ml-[10px] bg-inherit w-[auto]"
