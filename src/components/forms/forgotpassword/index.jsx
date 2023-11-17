@@ -1,12 +1,21 @@
 import React from "react";
+
 import { Formik, Form } from "formik";
-import BackIcon from "../../../assets/backicon.svg";
-import TextField from "../../input";
-import { ValidationSchema } from "./validationSchema";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+
+import BackIcon from "../../../assets/backicon.svg";
+import { sendResetPasswordEmail } from "../../../redux/user/actions";
+import TextField from "../../input";
+import Button from "../../button";
+
+import { ValidationSchema } from "./validationSchema";
 
 const ForgotPasswordForm = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { isLoading } = useSelector((store) => store.user);
+
   return (
     <div className="h-[100%] md:w-[586px] flex flex-col pr-[26px] pl-[24px] md:pr-[58px]">
       <div
@@ -24,8 +33,10 @@ const ForgotPasswordForm = () => {
         }}
         validationSchema={ValidationSchema}
         onSubmit={async (values, action) => {
-          console.log(values);
-          navigate("/change-password");
+          const res = await dispatch(sendResetPasswordEmail(values));
+          if (res) {
+            navigate("/email-verify");
+          }
         }}
       >
         {({ handleChange, errors }) => (
@@ -48,12 +59,13 @@ const ForgotPasswordForm = () => {
                   errors={errors}
                 />
               </div>
-              <button
+              <Button
+                loading={isLoading}
                 type="submit"
                 className="px-[35px] text-[12px] md:text-[16px] font-bold py-[13px] text-white bg-[#FF4970] hover:opacity-20 rounded-[16px] md:rounded-[27px]"
               >
                 Reset Password
-              </button>
+              </Button>
               <span className="text-[10px] md:text-[16px] text-[#333] pt-[12px] text-center">
                 Don't have an account?{" "}
                 <span
