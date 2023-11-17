@@ -12,7 +12,7 @@ export const signupUser = (payload) => async (dispatch, getState) => {
   } catch (error) {
     const errorMessage =
       error?.data?.message || "An error occurred, please try again.";
-    toast.error(errorMessage);
+    console.log(errorMessage);
   } finally {
     dispatch(STOP_LOADING());
   }
@@ -31,7 +31,7 @@ export const verifyEmailToken = (payload) => async (dispatch, getState) => {
   } catch (error) {
     const errorMessage =
       error?.data?.message || "An error occurred, please try again.";
-    toast.error(errorMessage);
+    console.log(errorMessage);
   } finally {
     dispatch(STOP_LOADING());
   }
@@ -51,7 +51,65 @@ export const loginUser = (payload) => async (dispatch, getState) => {
   } catch (error) {
     const errorMessage =
       error?.data?.message || "An error occurred, please try again.";
-    toast.error(errorMessage);
+    console.log(errorMessage);
+  } finally {
+    dispatch(STOP_LOADING());
+  }
+};
+
+export const resendVerificationEmail =
+  (query) => async (dispatch, getState) => {
+    dispatch(LOADING());
+    try {
+      const response = await axiosInstance.get(
+        `${baseURL}user/resend/email-token?email=${query}`
+      );
+      if (response.status === 200) {
+        return true;
+      }
+    } catch (error) {
+      const errorMessage =
+        error?.data?.message || "An error occurred, please try again.";
+      console.log(errorMessage);
+    } finally {
+      dispatch(STOP_LOADING());
+    }
+  };
+
+export const sendResetPasswordEmail =
+  (payload) => async (dispatch, getState) => {
+    dispatch(LOADING());
+    try {
+      const response = await axiosInstance.post(
+        `${baseURL}user/password-reset-token`,
+        payload
+      );
+      if (response.status === 200) {
+        return true;
+      }
+    } catch (error) {
+      const errorMessage =
+        error?.data?.message || "An error occurred, please try again.";
+      console.log(errorMessage);
+    } finally {
+      dispatch(STOP_LOADING());
+    }
+  };
+
+export const resetPassword = (payload) => async (dispatch, getState) => {
+  dispatch(LOADING());
+  try {
+    const response = await axiosInstance.patch(
+      `${baseURL}user/reset-password`,
+      payload
+    );
+    if (response.status === 200) {
+      return true;
+    }
+  } catch (error) {
+    const errorMessage =
+      error?.data?.message || "An error occurred, please try again.";
+    console.log(errorMessage);
   } finally {
     dispatch(STOP_LOADING());
   }
