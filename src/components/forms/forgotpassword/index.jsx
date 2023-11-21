@@ -45,7 +45,7 @@ const ForgotPasswordForm = () => {
               <h6 className="text-[#333] text-[18px] md:text-[30px] font-bold">
                 Forgot password?
               </h6>
-              <p className="text-[12px] md:text-[20px] text-[#000] pt-[32px] md:pt-[36px]">
+              <p className="text-[14px] md:text-[20px] text-[#000] pt-[32px] md:pt-[36px]">
                 Enter your email address and we will send you a link to reset
                 your password.
               </p>
@@ -66,7 +66,7 @@ const ForgotPasswordForm = () => {
               >
                 Reset Password
               </Button>
-              <span className="text-[10px] md:text-[16px] text-[#333] pt-[12px] text-center">
+              <span className="text-[14px] md:text-[16px] text-[#333] pt-[12px] text-center">
                 Don't have an account?{" "}
                 <span
                   onClick={() => navigate("/signup")}
