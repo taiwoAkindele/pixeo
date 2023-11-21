@@ -108,7 +108,7 @@ const SignupForm = () => {
                     onChange={() => setAgreeTerms(!agreeTerms)}
                     checked={agreeTerms === true}
                   />
-                  <span className="text-[9px] font-normal md:text-[16px] text-[#333]">
+                  <span className="text-[14px] font-normal md:text-[16px] text-[#333]">
                     By creating an account, I agree to our{" "}
                     <span className="text-[#111] hover:text-primary cursor-pointer underline">
                       Terms of use
@@ -126,7 +126,7 @@ const SignupForm = () => {
                 >
                   Sign up
                 </Button>
-                <span className="text-[10px] md:text-[16px] text-[#333] text-center">
+                <span className="text-[14px] md:text-[16px] text-[#333] text-center">
                   Already have an account?{" "}
                   <span
                     onClick={() => navigate("/login")}

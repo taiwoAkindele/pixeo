@@ -68,14 +68,14 @@ const LoginForm = () => {
               </div>
               <span
                 onClick={() => navigate("/forgot-password")}
-                className="ml-auto cursor-pointer text-[10px] hover:text-primary md:text-[16px] pb-[27px] text-[#000] underline"
+                className="ml-auto cursor-pointer text-[14px] hover:text-primary md:text-[16px] pb-[27px] text-[#000] underline"
               >
                 Forgot Password?
               </span>
               <Button type="submit" loading={isLoading}>
                 Log in
               </Button>
-              <span className="text-[10px] md:text-[16px] text-[#333] pt-[12px] text-center">
+              <span className="text-[14px] md:text-[16px] text-[#333] pt-[12px] text-center">
                 Don't have an account?{" "}
                 <span
                   onClick={() => navigate("/signup")}

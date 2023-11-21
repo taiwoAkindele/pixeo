@@ -19,7 +19,7 @@ const Button = ({ loading, children, ...props }) => {
     <button
       {...props}
       type="submit"
-      className="px-[35px] flex flex-row items-center justify-center text-[12px] md:text-[16px] font-bold py-[13px] text-white bg-[#FF4970] hover:opacity-20 rounded-[16px] md:rounded-[27px]"
+      className="px-[35px] flex flex-row items-center justify-center text-[14px] md:text-[16px] font-bold py-[13px] text-white bg-[#FF4970] hover:opacity-20 rounded-[16px] md:rounded-[27px]"
     >
       {loading && <BtnLoader />}
       {children}

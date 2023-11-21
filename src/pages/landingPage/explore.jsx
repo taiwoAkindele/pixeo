@@ -1,4 +1,7 @@
 import React from "react";
+
+import { useNavigate } from "react-router-dom";
+
 import ArrowBlack from "../../assets/arrowblack.svg";
 import Caricature from "../../assets/caricature.svg";
 import Certweb from "../../assets/certweb.svg";
@@ -24,6 +27,7 @@ const ExploreItems = [
 ];
 
 const Explore = ({ className }) => {
+  const navigate = useNavigate();
   return (
     <div className={`lg:px-[72px] px-[27px] bg-[#F5F5F5] ${className}`}>
       <Reveal>
@@ -70,7 +74,10 @@ const Explore = ({ className }) => {
         ))}
       </div>
       <Reveal>
-        <button className="px-[25px] py-[9px] md:px-[35px] hover:bg-[#ff49701a] mx-auto text-[12px] md:text-[16px] font-bold md:py-[13px] mt-[32px] md:mt-[24px] border-[1px] border-[#FF4970] text-[#FF4970] rounded-[30px] flex items-center justify-center gap-[8px]">
+        <button
+          onClick={() => navigate("/inspiration")}
+          className="px-[25px] py-[9px] md:px-[35px] hover:bg-[#ff49701a] mx-auto text-[12px] md:text-[16px] font-bold md:py-[13px] mt-[32px] md:mt-[24px] border-[1px] border-[#FF4970] text-[#FF4970] rounded-[30px] flex items-center justify-center gap-[8px]"
+        >
           Browse More
         </button>
       </Reveal>

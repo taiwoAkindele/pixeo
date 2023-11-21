@@ -1,9 +1,13 @@
 import React from "react";
+
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+
 import Explore from "../../assets/explore.svg";
 import Reveal from "../../components/Reveal";
-import { motion, useScroll, useTransform } from "framer-motion";
 
 const Hero = () => {
+  const navigate = useNavigate();
   const { scrollY } = useScroll({ offset: ["start end", "end start"] });
 
   const y = useTransform(scrollY, [0, 300], [0, -100]);
@@ -23,7 +27,10 @@ const Hero = () => {
             </p>
           </Reveal>
           <Reveal>
-            <button className="px-[27px] lg:px-[35px] hover:bg-[#ff49701a] text-[14px] lg:text-[16px] font-bold py-[10px] lg:py-[13px] mt-[20px] lg:mt-[24px] border-[1px] border-[#FF4970] text-[#FF4970] rounded-[30px] flex items-center justify-center gap-[6px] lg:gap-[8px]">
+            <button
+              onClick={() => navigate("/inspiration")}
+              className="px-[27px] lg:px-[35px] hover:bg-[#ff49701a] text-[14px] lg:text-[16px] font-bold py-[10px] lg:py-[13px] mt-[20px] lg:mt-[24px] border-[1px] border-[#FF4970] text-[#FF4970] rounded-[30px] flex items-center justify-center gap-[6px] lg:gap-[8px]"
+            >
               Explore
               <img src={Explore} alt="" />
             </button>
