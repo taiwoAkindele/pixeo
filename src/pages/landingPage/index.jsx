@@ -3,12 +3,14 @@ import Hero from "./hero";
 import Explore from "./explore";
 import Features from "./faetures";
 import Layout from "../../components/layout";
+import Pixeo from "./pixeo";
 
 const LandingPage = () => {
   return (
     <Layout>
       <Hero />
-      <Explore />
+      <Pixeo />
+      {/* <Explore /> */}
       <Features />
     </Layout>
   );
