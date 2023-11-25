@@ -37,7 +37,7 @@ const Hero = () => {
           </Reveal>
         </div>
       </div>
-      <div className="bg-[#F5F5F5]">
+      {/* <div className="bg-[#F5F5F5]">
         <motion.div
           style={{ y: y }}
           className="h-screen bg-[#000] flex flex-col items-center justify-center w-full"
@@ -47,7 +47,7 @@ const Hero = () => {
             PIXEO
           </h5>
         </motion.div>
-      </div>
+      </div> */}
     </>
   );
 };
