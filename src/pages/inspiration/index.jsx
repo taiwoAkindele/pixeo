@@ -60,8 +60,8 @@ const Inspiration = () => {
                 className="hover:scale-105 max-w-[416px] cursor-pointer transition"
               />
               <div className="absolute w-full hover:opacity-100 p-[16px] bottom-0 flex items-center justify-between opacity-0">
-                <span className="text-[#FFF] font-bold text-[16px]">Art.</span>
-                <img src={BookmarkDefault} alt="" />
+                {/* <span className="text-[#FFF] font-bold text-[16px]">Art.</span> */}
+                <img src={BookmarkDefault} alt="" className="ml-auto" />
               </div>
             </div>
 
