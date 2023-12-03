@@ -47,7 +47,7 @@ const Pixeo = () => {
           className="h-screen bg-[#000] flex flex-col items-center justify-center absolute w-full"
         >
           <span className="text-white">Introducing</span>
-          <h5 className="text-[120px] font-bold bg-pixeo bg-clip-text text-transparent">
+          <h5 className="md:text-[120px] text-[60px] font-bold bg-pixeo bg-clip-text text-transparent">
             PIXEO
           </h5>
         </motion.div>
