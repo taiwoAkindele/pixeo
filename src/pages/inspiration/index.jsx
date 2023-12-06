@@ -58,9 +58,9 @@ const Inspiration = () => {
                 src={item.image}
                 alt=""
                 className="hover:scale-105 max-w-[416px] cursor-pointer transition"
+                lazy="loading"
               />
               <div className="absolute w-full hover:opacity-100 p-[16px] bottom-0 flex items-center justify-between opacity-0">
-                {/* <span className="text-[#FFF] font-bold text-[16px]">Art.</span> */}
                 <img src={BookmarkDefault} alt="" className="ml-auto" />
               </div>
             </div>
@@ -71,6 +71,7 @@ const Inspiration = () => {
                   src={item.profile}
                   alt=""
                   className="w-[28px] h-[28px] object-contain"
+                  loading="lazy"
                 />
                 <span className="text-[14px] md:text-[16px] font-medium text-[#000] tracking-[0.023px]">
                   {item.name}
