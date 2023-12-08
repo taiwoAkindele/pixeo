@@ -72,23 +72,26 @@ const Features = () => {
         </Reveal>
         <div className="">
           {FeaturedPosts?.map((post, i) => (
-            <Reveal key={i}>
-              <div className="flex items-start gap-[24px] pt-[33px] lg:pt-[60px] pb-[26.5px] lg:pb-[48px] border-b-[1px] border-b-[text-black/0.20]">
-                <img
-                  src={post.image}
-                  alt=""
-                  className="w-[33px] h-[33px] lg:w-[60px] lg:h-[60px]"
-                />
-                <div className="flex flex-col gap-[5px]">
-                  <h6 className="text-[15px] leading-[17.846px] md:leading-[32.373px] lg:text-[24px] font-bold">
-                    {post.title}
-                  </h6>
-                  <p className="text-[10.8px] leading-[13.45px] md:leading-[21.582px] lg:text-[16px] font-medium">
-                    {post.desc}
-                  </p>
-                </div>
+            // <Reveal key={i}>
+            <div
+              key={i}
+              className="flex items-start gap-[24px] pt-[33px] lg:pt-[60px] pb-[26.5px] lg:pb-[48px] border-b-[1px] border-b-[text-black/0.20]"
+            >
+              <img
+                src={post.image}
+                alt=""
+                className="w-[33px] h-[33px] lg:w-[60px] lg:h-[60px]"
+              />
+              <div className="flex flex-col gap-[5px]">
+                <h6 className="text-[15px] leading-[17.846px] md:leading-[32.373px] lg:text-[24px] font-bold">
+                  {post.title}
+                </h6>
+                <p className="text-[10.8px] leading-[13.45px] md:leading-[21.582px] lg:text-[16px] font-medium">
+                  {post.desc}
+                </p>
               </div>
-            </Reveal>
+            </div>
+            // </Reveal>
           ))}
         </div>
       </div>
