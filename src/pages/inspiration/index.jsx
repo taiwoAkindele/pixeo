@@ -15,6 +15,8 @@ import BookmarkDefault from "../../assets/bookmarkDefault.svg";
 import profileImg from "../../assets/profileImage.svg";
 import Footer from "../../components/footer";
 import Search from "../../components/input/search";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const data = [
   { image: Giraffe, profile: profileImg, name: "Gül Işık", bookmark: "330" },
@@ -54,11 +56,14 @@ const Inspiration = () => {
         {data?.map((item, i) => (
           <div key={i} className="flex flex-col gap-[9.58px] md:gap-[12px]">
             <div className="relative overflow-hidden rounded-[12px]">
-              <img
+              <LazyLoadImage
+                alt={item.name}
                 src={item.image}
-                alt=""
+                height={400}
+                width={416}
+                effect="blur"
+                placeholderSrc={item.image}
                 className="hover:scale-105 max-w-[416px] cursor-pointer transition"
-                lazy="loading"
               />
               <div className="absolute w-full hover:opacity-100 p-[16px] bottom-0 flex items-center justify-between opacity-0">
                 <img src={BookmarkDefault} alt="" className="ml-auto" />
